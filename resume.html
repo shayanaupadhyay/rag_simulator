@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shayana Sharma | AI Product Manager Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #050816;
+      --card: rgba(17, 25, 40, 0.75);
+      --border: rgba(255,255,255,0.1);
+      --primary: #6ee7ff;
+      --secondary: #9b8cff;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --glow: 0 0 25px rgba(110, 231, 255, 0.25);
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #16213e 0%, #050816 45%, #02040a 100%);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .bg-grid {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: -1;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .orb1 {
+      width: 320px;
+      height: 320px;
+      background: rgba(111, 231, 255, 0.12);
+      top: -80px;
+      left: -80px;
+    }
+
+    .orb2 {
+      width: 260px;
+      height: 260px;
+      background: rgba(155, 140, 255, 0.15);
+      bottom: -80px;
+      right: -60px;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(20px); }
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1280px;
+      margin: auto;
+      padding: 40px 0 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      border-radius: 28px;
+      box-shadow: var(--glow);
+    }
+
+    .hero-left {
+      padding: 42px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(110,231,255,0.18), transparent 70%);
+      top: -60px;
+      right: -60px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(110,231,255,0.2);
+      background: rgba(110,231,255,0.08);
+      color: var(--primary);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00ffb7;
+      box-shadow: 0 0 10px #00ffb7;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 18px;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -2px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #6ee7ff, #b794ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .chip {
+      padding: 10px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+      color: #dbeafe;
+    }
+
+    .hero-right {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .stat-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-card h2 {
+      font-size: 32px;
+      color: var(--primary);
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, #6ee7ff, #9b8cff);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(110,231,255,0.12);
+    }
+
+    .role {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .company {
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .desc {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(110,231,255,0.08);
+      border: 1px solid rgba(110,231,255,0.12);
+      color: #dff9ff;
+      font-size: 14px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(#6ee7ff, #9b8cff);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 12px var(--primary);
+    }
+
+    .timeline-year {
+      color: var(--secondary);
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, rgba(110,231,255,0.15), rgba(155,140,255,0.15));
+      border: 1px solid rgba(255,255,255,0.08);
+      color: white;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: scale(1.03);
+    }
+
+    .typing::after {
+      content: '|';
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media(max-width: 980px) {
+      .hero,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media(max-width: 640px) {
+      .hero-left,
+      .hero-right,
+      .card {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <div class="container">
+
+    <section class="hero">
+      <div class="hero-left glass">
+        <div class="tag">
+          <div class="dot"></div>
+          OPEN TO AI PRODUCT MANAGEMENT OPPORTUNITIES
+        </div>
+
+        <h1>
+          Shayana <span class="gradient">Sharma</span>
+        </h1>
+
+        <p class="subtitle typing" id="typingText"></p>
+
+        <div class="quick-info">
+          <div class="chip">📍 Palampur, Himachal Pradesh</div>
+          <div class="chip">🎓 MBA Student</div>
+          <div class="chip">🤖 Aspiring AI Product Manager</div>
+          <div class="chip">📈 Marketing + Product + Strategy</div>
+        </div>
+
+        <a href="#" class="cta">
+          View Portfolio Experience →
+        </a>
+      </div>
+
+      <div class="hero-right glass">
+        <div class="stat-card">
+          <h2>5+</h2>
+          <p>Cross-functional internships across Product, AI, Marketing & Growth</p>
+        </div>
+
+        <div class="stat-card">
+          <h2>AI × PM</h2>
+          <p>Building real-world AI case studies, workflows, and product thinking frameworks</p>
+        </div>
+
+        <div class="stat-card">
+          <h2>End-to-End</h2>
+          <p>Experience in user research, GTM strategy, SEO, influencer marketing, and roadmap thinking</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">About Me</div>
+
+      <div class="glass card">
+        <p class="desc">
+          I am an aspiring AI Product Manager with a strong foundation in marketing, strategy, product thinking, and user psychology. My work focuses on solving real-world problems using AI-driven systems, intuitive product experiences, and customer-first thinking.
+          <br><br>
+          I have worked across SEO, influencer marketing, B2B product implementation, user research, roadmap planning, and AI product case studies. I enjoy translating complex ideas into meaningful digital experiences and building products that balance business goals with human-centered design.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Experience</div>
+
+      <div class="grid-2">
+
+        <div class="card glass">
+          <div class="role">Product Management & Implementation Intern</div>
+          <div class="company">Pehchaan.me</div>
+          <p class="desc">
+            Worked on translating product requirements into actionable documentation, collaborating with B2B stakeholders, conducting market research, roadmap planning, KPI analysis, and user testing.
+          </p>
+
+          <div class="skills">
+            <div class="skill">User Research</div>
+            <div class="skill">Product Roadmaps</div>
+            <div class="skill">KPI Analysis</div>
+            <div class="skill">B2B Communication</div>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <div class="role">AI & Product Case Study Builder</div>
+          <div class="company">Independent Projects</div>
+          <p class="desc">
+            Designed AI-first product concepts including subscription management systems, RAG-based AI applications, workflow automation ideas, and futuristic product experiences.
+          </p>
+
+          <div class="skills">
+            <div class="skill">AI Product Thinking</div>
+            <div class="skill">RAG Systems</div>
+            <div class="skill">UX Thinking</div>
+            <div class="skill">MVP Design</div>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <div class="role">SEO & Digital Marketing Intern</div>
+          <div class="company">Global Trend</div>
+          <p class="desc">
+            Conducted keyword research, website SEO audits, competitor analysis, and backlink-building strategies to improve organic visibility and digital growth.
+          </p>
+
+          <div class="skills">
+            <div class="skill">SEO</div>
+            <div class="skill">Keyword Research</div>
+            <div class="skill">Growth Strategy</div>
+            <div class="skill">Analytics</div>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <div class="role">Social Media & Influencer Marketing Intern</div>
+          <div class="company">Shriscape</div>
+          <p class="desc">
+            Created social media content strategies, influencer outreach plans, engagement-driven Instagram reel concepts, and audience-focused campaigns.
+          </p>
+
+          <div class="skills">
+            <div class="skill">Content Strategy</div>
+            <div class="skill">Influencer Marketing</div>
+            <div class="skill">Branding</div>
+            <div class="skill">Audience Engagement</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Skills & Capabilities</div>
+
+      <div class="glass card">
+        <div class="skills">
+          <div class="skill">AI Product Management</div>
+          <div class="skill">Product Strategy</div>
+          <div class="skill">User Research</div>
+          <div class="skill">Wireframing</div>
+          <div class="skill">Roadmap Planning</div>
+          <div class="skill">Market Research</div>
+          <div class="skill">SEO</div>
+          <div class="skill">Growth Marketing</div>
+          <div class="skill">Content Strategy</div>
+          <div class="skill">Prompt Engineering</div>
+          <div class="skill">RAG Systems</div>
+          <div class="skill">Business Communication</div>
+          <div class="skill">Presentation Skills</div>
+          <div class="skill">Strategic Thinking</div>
+          <div class="skill">AI Workflow Design</div>
+          <div class="skill">Customer Psychology</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Journey Timeline</div>
+
+      <div class="glass card timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024 → Present</div>
+          <div class="role">Transitioning into AI Product Management</div>
+          <p class="desc">
+            Focused on AI workflows, real-world product case studies, subscription management systems, and product-led growth thinking.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">MBA Journey</div>
+          <div class="role">Marketing + Finance Specialization</div>
+          <p class="desc">
+            Built strong understanding of business strategy, customer behavior, market analysis, and product positioning.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">Leadership & Sports</div>
+          <div class="role">University Defensive Line Footballer</div>
+          <p class="desc">
+            Developed discipline, resilience, teamwork, adaptability, and high-pressure decision-making skills.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Future Vision</div>
+
+      <div class="glass card">
+        <p class="desc">
+          My goal is to become an AI Product Manager building intelligent systems that simplify everyday life. I am deeply interested in AI-native product experiences, human-AI interaction, workflow automation, and scalable digital products that combine empathy with innovation.
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      Designed with futuristic glassmorphism • Built in HTML + CSS + JavaScript
+    </div>
+
+  </div>
+
+  <script>
+    const text = "AI Product Manager in the making — blending product strategy, AI systems, growth thinking, and user psychology into meaningful digital experiences.";
+    const typingElement = document.getElementById('typingText');
+
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 22);
+      }
+    }
+
+    typeText();
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(110,231,255,0.12), rgba(255,255,255,0.04))`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.background = 'rgba(255,255,255,0.04)';
+      });
+    });
+  </script>
+
+</body>
+</html>
